@@ -25,7 +25,8 @@ def main():
             err_out.write(traceback.format_exc())
         return
 
-    TEST_NETWORK='/path/to/fabric-samples/test-network'
+    home_dir = os.environ['HOME']
+    TEST_NETWORK=f'{home_dir}/fabric-samples/test-network'
     OLD_PATH=os.environ['PATH']
     try:
         os.chdir(TEST_NETWORK)
