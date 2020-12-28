@@ -11,12 +11,7 @@ def main():
 	home_dir = os.environ['HOME']
 	TEST_NETWORK=f'{home_dir}/fabric-samples/test-network'
 	OLD_PATH=os.environ['PATH']
-	try:
-		os.chdir(TEST_NETWORK)
-	except Exception:
-		with open("err_file.txt", "w") as err_out:
-		err_out.write(traceback.format_exc())
-		return
+	os.chdir(TEST_NETWORK)
 
 #Setting common env variables
 # $PATH=TEST_NETWORK+'/../bin:'+OLD_PATH
