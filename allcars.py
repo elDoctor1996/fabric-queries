@@ -40,7 +40,7 @@ def main():
 
         if allcars.stdout:
             print(allcars.stdout.decode('utf-8'))
-	    print("\nNumber of cars: %d" % (allcars.stdout.decode('utf-8').count('KEY') )
+	    print("\nNumber of cars: %d" % (allcars.stdout.decode('utf-8').count('KEY') ) )
         else:
             print(allcars.stderr.decode('utf-8'))
     except:
