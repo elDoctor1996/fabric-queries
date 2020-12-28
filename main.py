@@ -33,9 +33,9 @@ def main():
 		with open('done.csv', mode='r') as csv_file:
 			csv_reader = csv.reader(csv_file, delimiter=',')
 
-		for l in csv_reader:
-			done.append(l)
-		print("Found committed queries file")
+			for l in csv_reader:
+				done.append(l)
+			print("Found committed queries file")
 
 	except FileNotFoundError:
 		print("Not found committed queries file")
